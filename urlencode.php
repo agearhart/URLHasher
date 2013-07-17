@@ -1,5 +1,5 @@
 <?php
-$url = 'http://www.robotron2084guidebook.com/technical/christiangingras/';
+$url = 'http://learnyousomeerlang.com/common-test-for-uncommon-tests';
 
 echo urlencode($url);
 ?>

@@ -4,7 +4,7 @@
 */
 require_once('includes/config.php');
 require_once('includes/http_response_code.php');
-require_once('includes/db_functions.php');
+require_once('includes/URLHasherDB.php');
 
 $hashed_url = ( isset($_REQUEST['hash']) ) ? $_REQUEST['hash'] : '';
 
@@ -13,13 +13,17 @@ if($debug)
 	echo 'REQUEST_URI = '.$hashed_url."<br/>";
 }
 
-$db_conn = db_connect($db_dsn, $db_user, $db_password, $debug);
+$db_conn = new URLHasherDB($db_dsn, $db_user, $db_password, $debug);
+$db_conn->connect();
 
-$long_url = db_hash_exists($db_conn, $hashed_url);
+$long_url = $db_conn->hash_exists($hashed_url);
 
 if($long_url != '')
 {
-	http_redirect($long_url);
+	$db_conn->incr_hash_used($hashed_url);
+	
+	header('Location: '.$long_url);
+	die();
 }
 else
 {
