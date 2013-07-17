@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule   ^unzip/(.+)$   unzip.php?hash=$1   [L]
