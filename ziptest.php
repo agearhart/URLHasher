@@ -21,7 +21,7 @@ Only I will remain.",//should fail
 	);
 
 //Get the hashes for the URLs given
-$zip_url='http://ajgear.net/zip';
+$zip_url='http://ajgear.net/zipapi/zip';
 $hashes = array();
 
 foreach($urls as $url)
@@ -43,7 +43,7 @@ foreach($urls as $url)
 }
 
 //See if the hashes translated
-$unzip_url = 'http://ajgear.net/unzip/';
+$unzip_url = 'http://ajgear.net/zipapi/unzip/';
 $unzip_results = array();
 
 foreach($hashes as $hash)

@@ -1,6 +1,7 @@
 Options -Indexes
 
 RewriteEngine On
-RewriteRule   ^zip$   zip.php   [L]
-RewriteRule   ^unzip/(.+)$   unzip.php?hash=$1   [L]
+
+RewriteRule   ^zipapi/unzip/(.+)$   zipapi.php/unzip/\?hash=$1   [L]
+RewriteRule   ^zipapi/(.+)$   zipapi.php/$1/   [L]
 
