@@ -8,11 +8,6 @@ require_once('includes/URLHasherDB.php');
 
 $hashed_url = ( isset($_REQUEST['hash']) ) ? $_REQUEST['hash'] : '';
 
-if($debug)
-{
-	echo 'REQUEST_URI = '.$hashed_url."<br/>";
-}
-
 $db_conn = new URLHasherDB($db_dsn, $db_user, $db_password, $debug);
 $db_conn->connect();
 

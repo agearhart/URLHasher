@@ -1,6 +1,6 @@
 <?php
 
-$debug = true;
+$debug = false;
 
 $db_dsn = 'mysql:dbname=urls;host=localhost';
 $db_user = 'urlseeker';

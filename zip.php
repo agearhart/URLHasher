@@ -11,7 +11,7 @@ require_once('includes/http_response_code.php');
 require_once('includes/URLHasherDB.php');
 require_once('includes/urlhash.php');
 
-$long_url = ( isset($_REQUEST['long_url']) ) ? $_REQUEST['long_url'] : '';
+$long_url = ( isset($_POST['long_url']) ) ? $_POST['long_url'] : '';
 
 if($long_url != '')
 {
