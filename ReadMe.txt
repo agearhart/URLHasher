@@ -1,9 +1,10 @@
 Usage
 ============================================
+
 --------------------------------------------
 *  How to Zip a URL
 --------------------------------------------
-Call the /zipurl endpoint with a POST parameter of long_url.  The URL is then zipped and a short string is returned to the user.  For example:
+Call the /zip endpoint with a POST parameter of long_url.  The URL is then zipped and a short string is returned to the user.  For example:
 
 {
 	Request Url: http://localhost:8080/zip
@@ -29,3 +30,12 @@ Call the /unzip/xxx enpoint where xxx is the returned zipped string from the zip
 	Status Code: 200
 }
 This will automatically redirect the user's browser to the expanded URL.
+
+--------------------------------------------
+*  Future Plans
+--------------------------------------------
+1. /zip should optionally accept a length parameter so clients may choose how long of a hash they get
+2. a chron job that removes hashes that have not been used in the last X days
+3. a deploy script
+4. a metrics page
+5. tests to determine the optimal length of the unq_urls DB index, 128 was guesstimated

@@ -31,7 +31,7 @@ if($long_url != '')
 	else
 	{
 		$result = false;
-		$hashed_urls = hash_url($long_url, 5, true);
+		$hashed_urls = hash_url($long_url, 5, false);
 		$hashed_urls_len = count($hashed_urls);
 		
 		for($i=0; $i < $hashed_urls_len; ++$i)

@@ -1,5 +1,5 @@
 <?php
-$url = 'http://learnyousomeerlang.com/common-test-for-uncommon-tests';
+$url = 'http://www.google.com';
 
 echo urlencode($url);
 ?>
